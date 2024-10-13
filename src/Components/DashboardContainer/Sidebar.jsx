@@ -17,7 +17,7 @@ const SideBar = () => {
   const logout = () => {
     localStorage.clear();
     sessionStorage.clear();
-    history.push('/')
+    window.location = "/"
   };
 
 

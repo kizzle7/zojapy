@@ -5,7 +5,7 @@ import mailSuccessIcon from "../../Assets/mail-success.svg"
 import { GlobalStateContext } from "../../context/globalContext";
 import { useHistory } from 'react-router-dom'
 export const EmailVerifySuccess = (props) => {
-    const history =  useHistory()
+    const history = useHistory()
     const { state, setState } = useContext(GlobalStateContext);
     const proceedToDashboard = () => {
         history.push('/my-portfolio')
