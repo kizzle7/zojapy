@@ -8,7 +8,7 @@ export const Chart = () => {
             <div className="col-12">
                 <div className="card py-3 px-3" style={{ borderRadius: "16px", height: '348px' }}>
                     <div className="font-lexend">
-                        <Text type="text-lead-dark" text="Overview" />
+                        <Text type="text-lead-dark" text="" />
                         <img src={chartFrame} className="w-100" />
                     </div>
                 </div>
