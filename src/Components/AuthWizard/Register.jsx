@@ -51,7 +51,8 @@ export const Register = (props) => {
             if (result) {
                 setLoad(false);
                 Notification("success", "Success", result?.message)
-                console.log(result?.data?.token)
+                localStorage.setItem("f_name", firstName);
+                localStorage.setItem("l_name", lastName);
                 localStorage.setItem("user-token", result?.data?.token);
                 setTimeout(() => {
                     setState((prevState) => ({
