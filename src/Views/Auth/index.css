@@ -38,7 +38,7 @@
 }
 
 .auth-box {
-  padding: 100px 90px 0px 90px;
+  padding: 100px 90px 100px 90px;
 }
 
 .auth-card {
@@ -67,18 +67,15 @@
 }
 
 .chat-button {
-  position: fixed;
-  bottom:5px; /* Distance from the bottom */
-  right: 90px;  /* Distance from the right */
   padding: 15px;
+  margin-top: 2rem;
   background-color: #FF8600; /* Blue color */
   color: white;
   border: none;
   border-radius: 60.71px;
-  font-size: 12px;
+  font-size: 14px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Ensure it stays on top */
 }
 
 /* Hover effect */
