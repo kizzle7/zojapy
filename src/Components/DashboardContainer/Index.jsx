@@ -6,6 +6,10 @@ import searchIncon from "../../Assets/search-bar.svg"
 import PlusIcon from "../../Assets/bx-plus.svg"
 import bellIcon from "../../Assets/bell.svg"
 export const Layout = ({ children, title }) => {
+
+  if (!localStorage?.getItem('user-token')) {
+    window.location = "/"
+  }
   return (
     <div className="layout">
       <Sidebar />

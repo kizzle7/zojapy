@@ -4,6 +4,9 @@ import { AuthContent } from "../../Components/AuthWizard/AuthContents"
 import chatIcon from "../../Assets/bi_chat.svg"
 import "./index.css";
 function Index() {
+    if (localStorage?.getItem('user-token')) {
+        window.location = "/my-portfolio"
+      }
     return (
         <div className="auth__bg">
             <div className="row">
