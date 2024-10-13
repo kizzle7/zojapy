@@ -6,16 +6,12 @@ import { GlobalStateContext } from "../../context/globalContext";
 import { useHistory } from 'react-router-dom'
 export const EmailVerifySuccess = (props) => {
     const { state, setState } = useContext(GlobalStateContext);
-    const history =  useHistory()
-    const confirmEmail = () => {
-        setState((prevState) => ({
-            ...prevState,
-            renderingScreen: 'show-verify',
-        }));
-    }
 
     const proceedToDashboard = () => {
-        history.push('/my-portfolio')
+        setState((prevState) => ({
+            ...prevState,
+            renderingScreen: 'show-login',
+        }));
     }
     return (
         <div>

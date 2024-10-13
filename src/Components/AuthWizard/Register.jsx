@@ -22,6 +22,7 @@ export const Register = (props) => {
     } = useForm();
     const [isDisabled, setDisabled] = useState(true)
     const [disableBtn, setDisableBtn] = useState(false)
+    const [eyeVisible, setEyeVisisble] = useState(false)
     const [load, setLoad] = useState(false)
     const { state, setState } = useContext(GlobalStateContext);
     const firstName = watch('fname');
@@ -169,7 +170,7 @@ export const Register = (props) => {
                             <img src={PasswordIcon} className="px-3" style={isDisabled ? styles.iconNegate : styles.icon} />
                             <Input
                                 label="Password"
-                                type='password'
+                                type={!eyeVisible ? "password" : "text"}
                                 className="w-100"
                                 isDisabled={isDisabled}
                                 placeholder="Password"
@@ -182,8 +183,9 @@ export const Register = (props) => {
                                     },
                                 })}
                             />
-                            <div style={isDisabled ? styles.iconNegateRight : styles.iconright} >
-                                <img src={passwordEyeIcon} className="px-2" />
+                            <div style={isDisabled ? styles.iconNegateRight : styles.iconright} onClick={() => setEyeVisisble(!eyeVisible)}
+                            >
+                                <img src={passwordEyeIcon} className="px-2 cursor" />
                             </div>
 
                         </div>

@@ -23,6 +23,7 @@ export const Login = (props) => {
     } = useForm();
     const [isDisabled, setDisabled] = useState(true)
     const [load, setLoad] = useState(false)
+    const [eyeVisible, setEyeVisisble] = useState(false)
     const [disableBtn, setDisableBtn] = useState(false)
     const history = useHistory()
     const { state, setState } = useContext(GlobalStateContext);
@@ -122,15 +123,15 @@ export const Login = (props) => {
                                 label="Password"
                                 placeholder="Password"
                                 isDisabled={isDisabled}
-                                type="password"
+                                type={!eyeVisible ? "password" : "text"}
                                 style={styles.inputFull}
                                 {...register("password", {
                                     required: "Password is required",
 
                                 })}
                             />
-                            <div style={isDisabled ? styles.iconNegateRight : styles.iconright} >
-                                <img src={passwordEyeIcon} className="px-2" />
+                            <div style={isDisabled ? styles.iconNegateRight : styles.iconright} onClick={() => setEyeVisisble(!eyeVisible)}>
+                                <img src={passwordEyeIcon} className="px-2 cursor" />
                             </div>
 
 
