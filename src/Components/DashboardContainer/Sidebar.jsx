@@ -6,13 +6,9 @@ import menu from "../../constants/sidebars";
 import Logo from "../../Assets/buddy-logo.svg"
 import logoutIcon from "../../Assets/Logout.svg"
 const SideBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const history =  useHistory()
-
   const locationPath = useLocation();
   const currentLocation = locationPath.pathname.replace("/", "");
 
-  const toggle = () => setIsOpen(!isOpen);
 
   const logout = () => {
     localStorage.clear();
@@ -35,7 +31,7 @@ const SideBar = () => {
                   }`}
               >
                 <Link
-                  to={"/" + men.path}
+                  to={men.path !== "" ? '/' + men?.path : "#"}
                   className="pl-1"
                   style={{
                     textDecoration: "none",
