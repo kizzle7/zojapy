@@ -1,0 +1,160 @@
+/* Layout.css */
+
+/* General layout styling */
+.layout {
+  display: flex;
+  height: 100%;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.layout::-webkit-scrollbar {
+  display: none;
+}
+
+
+.sidebar {
+  width: 235px;
+  background-color: #fff;
+  padding: 10px 20px;
+  color: #818187;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar h2 {
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 14px 0px;
+  font-family: 'Lexend', sans-serif;
+
+}
+
+.sidebar li {
+  margin: 1.8rem 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19.19px;
+  letter-spacing: 2%;
+  color: #818187 !important;
+}
+
+.inactive-li {
+  padding: 7px 30px;
+}
+
+.active-li {
+  border-radius: 16px;
+  background-color: white;
+  border: 1px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Dark, visible shadow */
+  padding: 12px 30px;
+  width: 100%;
+  color: #FF8600 !important;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 40px 30px;
+  height: 100%;
+  background-color: #F1F1F1;
+}
+
+
+.head-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.circle-white {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid white;
+
+}
+
+.header-title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 33.25px;
+  font-family: 'Lexend', sans-serif;
+  color: #3B3B45;
+}
+
+.input-head-bar {
+  padding: 10px 45px;
+  border: 1px solid white;
+  background-color: white;
+  outline: none;
+  color: #818187;
+  width: 400px;
+  font-family: 'Lexend', sans-serif;
+  border-radius: 16px;
+}
+
+.log-out-btn{
+  border: 1px solid #FF860029;
+  background-color: #FF860029;
+  border-radius: 13px;
+  cursor: pointer;
+  font-size: 13px;
+  text-align: center;
+  font-weight: 500;
+  color: #FF8600;
+  padding: 8px 40px;
+}
+
+.content {
+  flex-grow: 1;
+  height: 100%;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .main-content {
+    margin-top: 0;
+  }
+
+  .header {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+    /* Hide sidebar on small screens */
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,110 @@
+.auth__bg {
+  height: 100vh;
+  width: fit-content;
+}
+
+.auth__container {
+  padding: 60px 100px;
+}
+
+.auth__bg-white {
+  background-color: white;
+  height: 100%;
+}
+
+.auth__bg--smoke {
+  background-color: #F8FAFC;
+  height: 100%;
+}
+
+.auth__pane {
+  padding: 70px 0px;
+}
+
+.auth__contents {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth__contents--text {
+  color: #5B6871;
+  line-height: 27px;
+  font-weight: 400;
+  padding-top: 1rem;
+  font-size: 17px;
+  padding-left: 1.2rem;
+
+}
+
+.auth-box {
+  padding: 100px 90px 0px 90px;
+}
+
+.auth-card {
+  background-color: white;
+  border: 1px solid #DDE2E4;
+  border-radius: 8px;
+  padding: 60px 50px;
+}
+
+.border-divider {
+  border-bottom: 1px solid #DDE2E4;
+  width: 100%;
+}
+
+.auth__box--signupborder {
+  border: 1px solid #DDE2E4;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 12px 0px;
+}
+
+.signupborder--contents {
+  display: flex;
+  align-items: center;
+}
+
+.chat-button {
+  position: fixed;
+  bottom:5px; /* Distance from the bottom */
+  right: 90px;  /* Distance from the right */
+  padding: 15px;
+  background-color: #FF8600; /* Blue color */
+  color: white;
+  border: none;
+  border-radius: 60.71px;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Hover effect */
+.chat-button:hover {
+  background-color: #FF8600;
+}
+
+@media (min-width: 810px) and (max-width: 1210px) {
+  .auth-box {
+    padding: 80px 80px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .auth__container {
+    padding: 60px 40px;
+  }
+
+  .auth-card {
+    background-color: white;
+    border: 1px solid #DDE2E4;
+    border-radius: 8px;
+    padding: 60px 30px;
+  }
+
+  .auth-box {
+    padding: 80px 20px;
+  }
+}

@@ -1,0 +1,15 @@
+.form-flex {
+    display: flex;
+    justify-content: space-b;
+    align-items: center;
+}
+
+.sent-mail-text {
+    width: 361px;
+    line-height: 24px;
+}
+
+.registration_form{
+    display: flex;
+    justify-content: center;
+}

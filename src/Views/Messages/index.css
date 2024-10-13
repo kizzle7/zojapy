@@ -1,0 +1,114 @@
+.messages-ui {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.messages-lists {
+    padding: 10px;
+    background-color: #FAFAFA;
+    border-radius: 12px;
+    height: 100%;
+}
+
+.message-content {
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #FAFAFA;
+    font-family: 'Inter', sans-serif;
+    height: 100%;
+}
+
+.msg-text-out{
+    color: #FF8600;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.msg-text-in{
+    color: #2E2E2E;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.msg-textout-border{
+    background-color: #F1F1F1;
+    border: 1px solid #F1F1F1;
+    padding: 10px;
+    border-radius: 12px;
+    width: 200px;
+   
+}
+
+.msg-textin-border{
+    background-color: #F1F1F1;
+    border: 1px solid #F1F1F1;
+    padding: 10px;
+    border-radius: 12px;
+    width: 230px;
+   
+}
+.line-msg {
+    border: 0.5px solid #CDCDCD;
+}
+
+.line-msg-content {
+    border: 0.5px solid #D9D9D9;
+    width: 100%;
+}
+
+.msg-contact-lists ul {
+    list-style: none;
+    cursor: pointer;
+    padding: 0px;
+
+}
+
+.count-msg{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #FF8600;
+    border: 1px soid #FF8600;
+    color: white;
+}
+
+.send-widget-border{
+    background-color: #D9D9D9;
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    padding: 25px 35px;
+}
+
+.active-contact{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Dark, visible shadow */
+    padding: 10px;
+}
+
+
+.input-msg-send {
+    padding: 10px 44px;
+    border: 1px solid white;
+    background-color: white;
+    outline: none;
+    color: #959595;
+    font-weight: 400;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    border-radius: 30px;
+}
+
+.input-msg-bar {
+    padding: 10px 50px;
+    border: 1px solid white;
+    background-color: white;
+    outline: none;
+    color:#959595;
+    font-weight: 300;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    border-radius: 30px;
+}

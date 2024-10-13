@@ -1,0 +1,51 @@
+.button {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 24px;
+    border-radius: 6px;
+    outline:transparent;
+    height: 44px;
+    padding: 10px 40px;
+    text-align: center;
+    border: 1px solid transparent;
+    background-color: transparent;
+  }
+
+  button:focus {
+    outline: none; /* Removes outline when focused */
+  }
+  
+  .curve-btn{
+    border-radius: 50px;
+  }
+  .disabled-button {
+    letter-spacing: -.6%;
+    background: #ECEDED;
+    border: 1px solid #ECEDED;
+    cursor: not-allowed;
+    pointer-events: all !important;
+    color: #C3C7CE;
+    outline:none;
+    border-radius: 6px;
+    width: 100%;
+    padding: 10px ;
+  }
+
+  .amber-btn {
+    color: #fff;
+    border: 1px solid #FF8600;
+    background-color: #FF8600;
+    letter-spacing: -.6%;
+    border-radius: 6px;
+
+  }
+  
+  .log-out-btn {
+    color: #fff;
+    border: 1px solid #FF8600;
+    background-color: #FF8600;
+    letter-spacing: -.6%;
+    border-radius: 6px;
+
+  }

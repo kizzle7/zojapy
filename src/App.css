@@ -1,0 +1,265 @@
+@import url('https://fonts.cdnfonts.com/css/lexend');
+@import url('https://fonts.cdnfonts.com/css/inter');
+
+
+body {
+  font-family: "Mulish", sans-serif;
+  height: 100vh;
+}
+
+.font-lexend {
+  font-family: 'Lexend', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/*global classes*/
+.text__lead {
+  line-height: 24px;
+  font-weight: 700;
+  font-size: 21px;
+}
+
+.text__xs--dark {
+  color: #84919A;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 19px;
+  letter-spacing: -.45%;
+}
+
+
+.text__lead--dark {
+  color: #3B3B45;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 26.6px;
+}
+
+
+.text__count--dark {
+  color: #3B3B45;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 33.25px;
+  letter-spacing: -.45%;
+}
+
+.text__sm--mute {
+  color: #818187;
+  font-size: 14px;
+  font-weight: lighter;
+  line-height: 19px;
+  letter-spacing: -.45%;
+}
+
+.text__sm--dark {
+  color: #84919A;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: -.45%;
+}
+
+.text__xs--orange {
+  color: #FF8600;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 19px;
+  letter-spacing: -.45%;
+}
+
+
+.text__sm--orange {
+  color: #FF8600;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: -.45%;
+}
+
+.text__md--dark {
+  color: #5B6871;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -.45%;
+
+}
+
+.cabinet-font-txt {
+  font-family: "Cabinet Grotesk", sans-serif !important;
+}
+
+.user-border {
+  background-color: #000000;
+  color: white;
+  border-radius: 10px;
+  padding: 3px 27px;
+}
+
+.table-sizee {
+  font-size: 13px !important;
+}
+
+.border-textx {
+  background-color: #cdd0d5;
+  color: #000000;
+  border: 1px solid #cdd0d5;
+  border-radius: 12px;
+  margin: 1rem 0;
+  padding: 1px 10px;
+}
+
+.border-smoke {
+  background-color: #f9f9fa;
+  border: 1px solid #f9f9fa;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.border-button {
+  color: #545454;
+  border: 1px solid #afafaf;
+  background-color: white;
+  border-radius: 6px;
+  padding: 3px 10px;
+}
+
+.border-line-dark {
+  border-bottom: 0.1px solid #e2e2e2;
+  border-width: thin !important;
+  padding-top: 5px;
+}
+
+.table-btn-details {
+  border: 1px solid #d9dbe0;
+  background-color: #f2f4f7;
+  color: #667084;
+  border-radius: 8px;
+  text-align: center;
+  padding: 8px 0px;
+  cursor: pointer;
+}
+
+.accord-border {
+  background-color: #fafafa;
+  cursor: pointer;
+  border: 1px solid #fafafa;
+  padding: 8px 10px;
+}
+
+.card {
+  border: 1px solid #eeeeee !important;
+}
+
+.text-muted {
+  color: #757575;
+  font-weight: 100;
+}
+
+.text-muted-feint {
+  color: #667084;
+  font-weight: 100;
+}
+
+:where(.css-dev-only-do-not-override-qgg3xn).ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-tail::after {
+  background-color: #ff6929;
+}
+
+:where(.css-dev-only-do-not-override-qgg3xn).ant-steps.ant-steps-dot .ant-steps-item-icon .ant-steps-icon-dot,
+:where(.css-dev-only-do-not-override-qgg3xn).ant-steps.ant-steps-dot.ant-steps-small .ant-steps-item-icon .ant-steps-icon-dot {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  transition: all 0.3s;
+  background: #ff6929 !important;
+}
+
+:where(.css-dev-only-do-not-override-qgg3xn).ant-steps .ant-steps-item-finish .ant-steps-item-icon {
+  background-color: #fff;
+  border-color: #ff6929;
+}
+
+.validate-error {
+  color: red;
+  font-size: 12px;
+}
+
+:where(.css-dev-only-do-not-override-qgg3xn).ant-progress .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path {
+  stroke: #ff6929;
+}
+
+.anticon {
+  display: inline-flex;
+  align-items: center;
+  color: #ff6929 !important;
+  font-style: normal;
+  /* line-height: 0; */
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:where(.css-dev-only-do-not-override-qgg3xn).ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title {
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px !important;
+  white-space: nowrap !important;
+  font-weight: 500;
+}
+
+
+.flex-sys {
+  display: flex;
+  justify-content: '';
+  align-items: center;
+}
+
+.pulseWrapper {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.pulse {
+  height: 45px;
+  width: 45px;
+  padding: 10px;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+.rwt__tablist:not([aria-orientation="vertical"]) .rwt__tab[aria-selected="true"]:after {
+  border-bottom: 3px solid #000000 !important;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .card {
+    border: 1px solid #eeeeee !important;
+    margin-bottom: 1rem;
+  }
+
+  .flex-sys {
+    display: flex;
+    flex-direction: column;
+    justify-content: '';
+    align-items: center;
+  }
+}
