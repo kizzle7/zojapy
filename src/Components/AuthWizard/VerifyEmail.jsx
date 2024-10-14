@@ -24,8 +24,8 @@ export const VerifyEmail = (props) => {
         const data = {
             "otp": otp
         };
-        if (!otp) {
-            Notification('error', 'Error', 'OTP is required!')
+        if(!otp){
+            Notification('error','Error','OTP is required!')
             return;
         }
         setLoad(true)

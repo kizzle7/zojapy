@@ -57,7 +57,7 @@ const SideBar = () => {
         <div className="d-flex justify-content-center align-items-center mt-2 position-relative">
           <div><img src={userImg} className="position-absolute user-logout"  /></div>
         </div>
-          <div className="text__lead--dark" style={{ fontSize: '15px' }}>{localStorage?.getItem('f_name') + " " + localStorage?.getItem('l_name')}</div>
+          <div className="text__lead--dark pt-2" style={{ fontSize: '15px' }}>{localStorage?.getItem('f_name') + " " + localStorage?.getItem('l_name')}</div>
           <div className="text__xs--dark" style={{ fontWeight: 300 }}>Influencer</div>
           <div className="py-2">
             <div className="log-out-btn" onClick={logout}>
