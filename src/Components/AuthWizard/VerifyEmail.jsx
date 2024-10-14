@@ -24,8 +24,8 @@ export const VerifyEmail = (props) => {
         const data = {
             "otp": otp
         };
-        if(!otp){
-            Notification('error','Error','OTP is required!')
+        if (!otp) {
+            Notification('error', 'Error', 'OTP is required!')
             return;
         }
         setLoad(true)
@@ -99,7 +99,7 @@ export const VerifyEmail = (props) => {
 
                 <br />
                 <div className="pt-2">
-                    <Button text="Confirm code" isDisabled={disableBtn} onClick={confirmOtp} loading={load} className="amber-btn" />
+                    <Button text="Confirm code" isDisabled={disableBtn} onClick={confirmOtp} loading={load} className="amber-btn w-50" />
                 </div>
                 <br />
                 <div className="">
