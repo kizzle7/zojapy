@@ -3,10 +3,12 @@ import { AuthWizard } from "../../Components/AuthWizard/auth-wizard"
 import { AuthContent } from "../../Components/AuthWizard/AuthContents"
 import chatIcon from "../../Assets/bi_chat.svg"
 import "./index.css";
+import { useHistory } from 'react-router-dom';
 function Index() {
-    if (localStorage?.getItem('user-token')) {
-        window.location = "/my-portfolio"
-      }
+    const history =  useHistory()
+    if(localStorage?.getItem('user-token')){
+        history.push('/my-portfolio')
+    }
     return (
         <div className="auth__bg">
             <div className="row">

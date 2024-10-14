@@ -5,8 +5,15 @@ import mailSuccessIcon from "../../Assets/mail-success.svg"
 import { GlobalStateContext } from "../../context/globalContext";
 import { useHistory } from 'react-router-dom'
 export const EmailVerifySuccess = (props) => {
-    const history = useHistory()
     const { state, setState } = useContext(GlobalStateContext);
+    const history =  useHistory()
+    const confirmEmail = () => {
+        setState((prevState) => ({
+            ...prevState,
+            renderingScreen: 'show-verify',
+        }));
+    }
+
     const proceedToDashboard = () => {
         history.push('/my-portfolio')
     }
@@ -29,6 +36,8 @@ export const EmailVerifySuccess = (props) => {
                     <div className="pt-2 d-flex justify-content-center align-items-center">
                         <Button text="Continue" className="amber-btn" onClick={proceedToDashboard} />
                     </div>
+
+
                 </div>
             </div>
 

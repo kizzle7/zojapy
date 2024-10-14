@@ -19,7 +19,7 @@ export const TrendingPosts = () => {
                                     <div className="text__lead--dark" style={{ fontSize: '16px', lineHeight: '24px' }}>
                                         8 Upcoming Influencer Marketing Trends and Benefits
                                     </div>
-                                    <div className="text__sm--mute pt-2" style={{fontWeight:100}}>
+                                    <div className="text__xs--dark pt-2" style={{fontWeight:100}}>
                                         Marketing is evolving. It's changing from a one-way street to a two-way conversa…
                                     </div>
                                     <div className="pt-3">
@@ -51,7 +51,7 @@ export const TrendingPosts = () => {
                                     <div className="text__lead--dark" style={{ fontSize: '15px', lineHeight: '24px' }}>
                                         How Influencer Marketing Affects Consumer Buying Behavior
                                     </div>
-                                    <div className="text__sm--mute pt-2" style={{fontWeight:100}}>
+                                    <div className="text__xs--dark pt-2" style={{fontWeight:100}}>
                                         As influencer marketing continues to grow, consumers have been turning to their…
                                     </div>
                                     <div className="pt-3">

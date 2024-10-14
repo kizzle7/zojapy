@@ -24,6 +24,13 @@ const authService = {
         ...data,
         status,
       })),
+  resendOtp: (request) =>
+    serviceInstance
+      .post(`${config.baseUrl}admin/resend-otp `, request)
+      .then(({ data, status }) => ({
+        ...data,
+        status,
+      })),
 };
 
 export default authService;

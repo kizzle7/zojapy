@@ -3,7 +3,7 @@ import Logo from "../../Assets/buddy-logo.svg";
 import Checkbox from "../../Assets/Checkbox.svg";
 export const AuthContent = (props) => {
     return (
-        <div className="col-md-6 col-12">
+        <div className="col-md-6 col-12 web-ui">
             <div className="auth__bg--white">
                 <div className="auth__container">
                     <div>

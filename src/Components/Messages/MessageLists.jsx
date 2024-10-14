@@ -61,8 +61,8 @@ export const MessagesLists = () => {
                             </div>
                         </div>
                         <div className="line-msg"></div>
-                        <div className="msg-contact-lists pt-3">
-                            <ul>
+                        <div className="msg-contact-lists pt-3 scrollable-msg-list">
+                            <ul className="msg-scroll">
                                 {contactLists?.map((contact) => {
                                     return (
                                         <li className={activeContact === contact?.id ? 'active-contact mb-4' : 'mb-4'} onClick={makeActiveContact.bind(this, contact)}>
@@ -72,7 +72,7 @@ export const MessagesLists = () => {
                                                         <div><img src={contact?.image} /></div>
                                                         <div className="pl-2">
                                                             <div className="text__sm--orange" style={{ fontWeight: 500 }}>{contact.name}</div>
-                                                            <div className="text__xs--dark" style={{ color: '#959595', fontWeight: 400, fontSize: '10px' }}>{contact.message}</div>
+                                                            <div className="text__xs--dark" style={{ color: '#959595', fontWeight: 400, fontSize: '10px' }}>{contact.chats[0]?.outgoing[contact.chats[0]?.outgoing.length - 1]}</div>
                                                         </div>
                                                     </div>
                                                 </div>

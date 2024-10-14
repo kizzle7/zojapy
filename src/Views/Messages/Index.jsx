@@ -8,7 +8,7 @@ const Messages = () => {
     return (
         <div>
             <Layout title="Messages">
-                <div className="pt-2">
+                <div className="">
                     <div className="row">
                         <div className="col-12">
                             <div className="card py-4 px-3 h-100" style={{ borderRadius: '12px', height: '100vh' }}>

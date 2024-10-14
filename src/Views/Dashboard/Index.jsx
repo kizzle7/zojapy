@@ -2,12 +2,13 @@
 import React, { useState, useEffect } from "react";
 import { Layout } from "../../Components/DashboardContainer/Index";
 import { MetricsCounts } from "../../Components/Dashboard/Counts"
-import { Chart } from "../../Components/Dashboard/Chart"
+import { Charts } from "../../Components/Dashboard/Chart"
 import { TrendingPosts } from "../../Components/Dashboard/Trending"
 import { PotentialMembers } from "../../Components/Dashboard/PotentialMembers"
 import { Watchlist } from "../../Components/Dashboard/Watchlist"
 import { Revenue } from "../../Components/Dashboard/Revenue"
 import { NewsTrend } from "../../Components/Dashboard/News"
+import "./Index.css"
 const Dashboard = () => {
   return (
     <div>
@@ -17,7 +18,7 @@ const Dashboard = () => {
             <div className="col-md-8 col-12">
               <MetricsCounts />
               <div className="pt-3">
-                <Chart />
+                <Charts />
               </div>
               <div className="pt-3">
                 <TrendingPosts />

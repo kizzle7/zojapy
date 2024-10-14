@@ -10,6 +10,7 @@ import { notification } from "antd";
 import { styles } from "../../utils"
 import { GlobalStateContext } from "../../context/globalContext";
 import mailCheck from "../../Assets/mail-check.svg"
+import { BsEye } from "react-icons/bs";
 import passwordEyeIcon from "../../Assets/eye-pass.svg"
 import authService from "../../services/auth-service"
 export const Register = (props) => {
@@ -64,7 +65,6 @@ export const Register = (props) => {
         } catch (err) {
             setLoad(false);
             setDisableBtn(false)
-            Notification("error", "Error", err?.response?.data?.message);
         }
     }
 
@@ -184,9 +184,10 @@ export const Register = (props) => {
                                     },
                                 })}
                             />
-                            <div style={isDisabled ? styles.iconNegateRight : styles.iconright} onClick={() => setEyeVisisble(!eyeVisible)}
-                            >
-                                <img src={passwordEyeIcon} className="px-2 cursor" />
+
+                            <div className="cursor" style={isDisabled ? styles.iconNegateRight : styles.iconright} onClick={() => setEyeVisisble(!eyeVisible)}>
+                                {eyeVisible ? <div className="pr-2"><BsEye size={24} /></div> :
+                                    <img src={passwordEyeIcon} className="px-2 " />}
                             </div>
 
                         </div>

@@ -10,6 +10,7 @@ export const VerifyEmail = (props) => {
     const handleChangePin = (otp) => setOtp(otp);
     const [disableBtn, setDisableBtn] = useState(false)
     const [load, setLoad] = useState(false)
+    const [loadResend, setLoadResend] = useState(false)
     const { state, setState } = useContext(GlobalStateContext);
 
     const Notification = (type, msgType, msg) => {
@@ -23,6 +24,10 @@ export const VerifyEmail = (props) => {
         const data = {
             "otp": otp
         };
+        if(!otp){
+            Notification('error','Error','OTP is required!')
+            return;
+        }
         setLoad(true)
         setDisableBtn(true)
         try {
@@ -40,9 +45,24 @@ export const VerifyEmail = (props) => {
         } catch (err) {
             setLoad(false);
             setDisableBtn(false)
-            Notification("error", "Error", err?.response?.data?.message);
         }
 
+    }
+
+    const resendOtp = async () => {
+        const data = {
+            "email": state.onboardingEmail,
+        };
+        setLoadResend(true)
+        try {
+            const result = await authService.resendOtp(data);
+            if (result) {
+                setLoadResend(false);
+                Notification("success", "Success", result?.message)
+            }
+        } catch (err) {
+            setLoadResend(false);
+        }
     }
     return (
         <div>
@@ -83,7 +103,7 @@ export const VerifyEmail = (props) => {
                 </div>
                 <br />
                 <div className="">
-                    <div className="pt-3 text__md--dark">Didn’t get the mail? <span className="text__sm--orange"> Resend</span></div>
+                    <div className="pt-3 text__md--dark cursor">Didn’t get the mail? <span className="text__sm--orange" onClick={resendOtp}> {loadResend ? 'Sending' : 'Resend'}</span></div>
                 </div>
 
             </div>

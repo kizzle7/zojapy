@@ -1,0 +1,21 @@
+.amb-border {
+    background-color: #FF8600;
+    border: 1px solid #FF8600;
+    padding: 3px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: white;
+    cursor: pointer;
+    font-family: "Lexend";
+}
+
+.light-border {
+    background-color: #F6F6F6;
+    border: 1px solid #F6F6F6;
+    padding: 3px 12px;
+    font-size: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #818187;
+    font-family: "Lexend";
+}

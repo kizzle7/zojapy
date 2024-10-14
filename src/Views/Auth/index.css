@@ -46,6 +46,7 @@
   border: 1px solid #DDE2E4;
   border-radius: 8px;
   padding: 60px 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .border-divider {
@@ -87,6 +88,7 @@
   .auth-box {
     padding: 80px 80px;
   }
+
 }
 
 @media screen and (max-width: 990px) {
@@ -98,6 +100,7 @@
     background-color: white;
     border: 1px solid #DDE2E4;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 60px 30px;
   }
 

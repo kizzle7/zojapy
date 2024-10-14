@@ -7,7 +7,7 @@ export const PotentialMembers = () => {
     return (
         <div className="row">
             <div className="col-12">
-                <div className="card py-3 px-3" style={{ borderRadius: "16px" }}>
+                <div className="card py-3 px-3" style={{ borderRadius: "16px", height:'246px' }}>
                     <div className="font-lexend">
                         <Text type="text-lead-dark" text="Potential Members" />
                     </div>

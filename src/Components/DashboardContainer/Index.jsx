@@ -14,42 +14,43 @@ export const Layout = ({ children, title }) => {
     <div className="layout">
       <Sidebar />
       <div className="main-content">
-        <div className="head-layout">
-          <div>
-            <div className="header-title">{title}</div>
-          </div>
-          <div>
-            <div className="d-flex justify-content align-items-center">
-              <div className="pr-4">
-                <div style={styles.inputContainer}>
-                  <img src={searchIncon} className="px-3 pb-3" style={styles.icon} />
-                  <input type="text" className="input-head-bar pt-3" placeholder="Search" />
-                </div>
+        <br />
+        <main className="content h-100 pb-4">
+          <nav className="navBarr pb-4">
+            <div className="head-layout">
+              <div>
+                <div className="header-title">{title}</div>
               </div>
-              <div className="pr-4">
-                <div className="circle-white">
-                  <div className="d-flex justify-content-center align-items-center h-100">
-                    <div>
-                      <img src={PlusIcon} />
+              <div>
+                <div className="d-flex justify-content align-items-center">
+                  <div className="pr-4">
+                    <div style={styles.inputContainer}>
+                      <img src={searchIncon} className="px-3 pb-3" style={styles.icon} />
+                      <input type="text" className="input-head-bar pt-3" placeholder="Search" />
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className="">
-                <div className="circle-white">
-                  <div className="d-flex justify-content-center align-items-center h-100">
-                    <div>
-                      <img src={bellIcon} />
+                  <div className="pr-4">
+                    <div className="circle-white">
+                      <div className="d-flex justify-content-center align-items-center h-100">
+                        <div>
+                          <img src={PlusIcon} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="">
+                    <div className="circle-white">
+                      <div className="d-flex justify-content-center align-items-center h-100">
+                        <div>
+                          <img src={bellIcon} />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <br />
-
-        <main className="content h-100">
+          </nav>
           {children}
         </main>
       </div>

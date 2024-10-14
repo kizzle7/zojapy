@@ -3,13 +3,19 @@
 /* General layout styling */
 .layout {
   display: flex;
-  height: 100%;
-  overflow: scroll;
+  height: 100vh;
+  width: 100vw;
   scrollbar-width: none;
 }
 
 .layout::-webkit-scrollbar {
   display: none;
+}
+
+.navBarr {
+  z-index: 100;
+  flex-shrink: 0;
+  padding: 2px 0px;
 }
 
 
@@ -19,10 +25,16 @@
   padding: 10px 20px;
   color: #818187;
   display: flex;
-  height: 100%;
+  position: fixed;
   flex-direction: column;
   overflow: scroll;
   scrollbar-width: none;
+  z-index: 1000;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  height: 100vh;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar::-webkit-scrollbar {
@@ -57,19 +69,22 @@
   border-radius: 16px;
   background-color: white;
   border: 1px solid white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Dark, visible shadow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* Dark, visible shadow */
   padding: 12px 30px;
   width: 100%;
   color: #FF8600 !important;
 }
 
+
 .main-content {
+  background-color: #F1F1F1;
+  margin-left: 235px;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  flex: 1;
-  padding: 40px 30px;
   height: 100%;
-  background-color: #F1F1F1;
+  overflow: hidden;
 }
 
 
@@ -77,6 +92,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-grow: 1;
+
 }
 
 .circle-white {
@@ -85,7 +102,6 @@
   border-radius: 50%;
   background-color: white;
   border: 1px solid white;
-
 }
 
 .header-title {
@@ -106,8 +122,12 @@
   font-family: 'Lexend', sans-serif;
   border-radius: 16px;
 }
+.user-logout{
+  bottom: 0px;
+  left: 35%;
+}
 
-.log-out-btn{
+.log-out-btn {
   border: 1px solid #FF860029;
   background-color: #FF860029;
   border-radius: 13px;
@@ -122,6 +142,12 @@
 .content {
   flex-grow: 1;
   height: 100%;
+  padding: 0px 20px;
+  overflow-y: auto;
+}
+
+.shadow-box-aut{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Media Queries for responsiveness */

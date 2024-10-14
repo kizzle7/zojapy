@@ -45,13 +45,13 @@ export const Index = () => {
                 </div>
             </div>
             <div className="mb-3">
-                <div className="auth__box--signupborder" onClick={renderRegistrationScreen}>
+                <div className="auth__box--signupborder">
                     <div className="d-flex justify-content-center align-items-center">
                         <div className="signupborder--contents ">
                             <div className="">
                                 <img src={GoogleIcon} />
                             </div>
-                            <div className="pl-2">Sign up with email
+                            <div className="pl-2">Sign up with gmail
                             </div>
 
                         </div>

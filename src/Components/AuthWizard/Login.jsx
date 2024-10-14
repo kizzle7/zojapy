@@ -11,6 +11,7 @@ import mailCheck from "../../Assets/mail-check.svg"
 import { GlobalStateContext } from "../../context/globalContext";
 import passwordEyeIcon from "../../Assets/eye-pass.svg"
 import { notification } from "antd";
+import { BsEye, BsEyeSlash } from "react-icons/bs";
 import authService from "../../services/auth-service";
 export const Login = (props) => {
     const {
@@ -59,7 +60,6 @@ export const Login = (props) => {
         } catch (err) {
             setLoad(false);
             setDisableBtn(false)
-            Notification("error", "Error", err?.response?.data?.message);
         }
     }
 
@@ -130,8 +130,9 @@ export const Login = (props) => {
 
                                 })}
                             />
-                            <div style={isDisabled ? styles.iconNegateRight : styles.iconright} onClick={() => setEyeVisisble(!eyeVisible)}>
-                                <img src={passwordEyeIcon} className="px-2 cursor" />
+                            <div className="cursor" style={isDisabled ? styles.iconNegateRight : styles.iconright} onClick={() => setEyeVisisble(!eyeVisible)}>
+                                {eyeVisible ? <div className="pr-2"><BsEye size={24} /></div> :
+                                    <img src={passwordEyeIcon} className="px-2 " />}
                             </div>
 
 

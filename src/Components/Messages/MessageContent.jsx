@@ -8,6 +8,7 @@ import { SendWidget } from "./SendMsgWidget"
 import { GlobalStateContext } from "../../context/globalContext";
 export const MessageContent = () => {
     const { state, setState } = useContext(GlobalStateContext);
+    console.log(state.selectedChatContact)
     return (
         <div className="col-md-8 py-2 col-12">
             <div className="message-content">
@@ -41,122 +42,64 @@ export const MessageContent = () => {
                     <div className="msg-tile pb-3">
                         <div className="">
                             <div className="d-flex justify-content-start">
-                                <div>
-                                    <div className="d-flex align-items-end">
-                                        <div className="mr-2"><img src={state?.selectedChatContact?.image} width={20} /></div>
-                                        <div className="msg-textin-border">
-                                            <div className="msg-text-in">
-                                                Hi David, have you got the project report pdf?
-                                            </div>
+                                {state.selectedChatContact?.chats?.map((chat) => {
+                                    return (
+                                        <div>
+                                            {chat?.incoming?.map((chat) => {
+                                                return (
+                                                    <div className="d-flex align-items-end">
+                                                        <div className="mr-2"><img src={state?.selectedChatContact?.image} width={20} /></div>
+                                                        <div className="msg-textin-border mb-2">
+                                                            <div className="msg-text-in">
+                                                                {chat}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                )
+                                            })}
+
                                         </div>
-                                    </div>
-                                </div>
+
+                                    )
+                                })}
 
                             </div>
                         </div>
                         <div className="mt-4">
                             <div className="d-flex justify-content-end">
-                                <div>
-                                    <div className="d-flex align-items-end">
-                                        <div className="msg-textout-border">
-                                            <div className="msg-text-out">
-                                                NO. I did not get it
-                                            </div>
-                                        </div>
-                                        <div className="ml-2"><img src={user} width={20} /></div>
+                                {state?.selectedChatContact?.chats?.map((chat) => {
+                                    return (
+                                        <div>
+                                            {chat?.outgoing?.map((chat) => {
+                                                return (
+                                                    <div className="d-flex align-items-end">
+                                                        <div className="msg-textout-border mb-2">
+                                                            <div className="msg-text-out">
+                                                                {chat}
+                                                            </div>
+                                                        </div>
+                                                        <div className="ml-2"><img src={user} width={20} /></div>
 
-                                    </div>
-                                </div>
+                                                    </div>
+                                                )
+                                            })}
+
+                                        </div>
+                                    )
+                                })}
+
                             </div>
                         </div>
                         <div className="pt-3">
                             <div className="d-flex align-items-center">
                                 <div className="line-msg-content"></div>
-                                <div className="px-3" style={{ color: '#D9D9D9', fontWeight: 300 }}>Yesterday</div>
+                                <div className="px-3" style={{ color: '#D9D9D9', fontWeight: 300 }}>Today</div>
                                 <div className="line-msg-content"></div>
 
                             </div>
-
-
                         </div>
                     </div>
-                    <div className="msg-tile pb-3">
-                        <div className="">
-                            <div className="d-flex justify-content-start">
-                                <div>
-                                    <div className="d-flex align-items-end">
-                                        <div className="mr-2"><img src={state?.selectedChatContact?.image} width={20} /></div>
-                                        <div className="msg-textin-border">
-                                            <div className="msg-text-in">
-                                                Ok, I will just sent it here. Plz be sure to fill the details by today end of the day.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-
-                            </div>
-                            <div className="d-flex justify-content-start mt-3">
-                                <div>
-                                    <div className="d-flex align-items-end">
-                                        <div className="mr-2"><img src={state?.selectedChatContact?.image} width={20} /></div>
-                                        <div className="msg-textin-border">
-                                            <div className="msg-text-in">
-                                                Ok, I will just sent it here. Plz be sure to fill the details by today end of the day.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <div className="mt-4">
-                            <div className="d-flex justify-content-end">
-                                <div>
-                                    <div className="d-flex align-items-end">
-                                        <div className="msg-textout-border">
-                                            <div className="msg-text-out">
-                                                Ok. Should I send it over email as well after filling the details.
-                                            </div>
-                                        </div>
-                                        <div className="ml-2"><img src={user} width={20} /></div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="mt-3">
-                            <div className="d-flex justify-content-start">
-                                <div>
-                                    <div className="d-flex align-items-end">
-                                        <div className="mr-2"><img src={state?.selectedChatContact?.image} width={20} /></div>
-                                        <div className="msg-textin-border">
-                                            <div className="msg-text-in">
-                                                Ya. I’ll be adding more team members to it.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div className="mt-4">
-                            <div className="d-flex justify-content-end">
-                                <div>
-                                    <div className="d-flex align-items-end">
-                                        <div className="msg-textout-border">
-                                            <div className="msg-text-out">
-                                                OK
-                                            </div>
-                                        </div>
-                                        <div className="ml-2"><img src={user} width={20} /></div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
                 <SendWidget />
